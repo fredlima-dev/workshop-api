@@ -3,16 +3,44 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="50af70a0-c0e0-4e3f-9270-e2dbc1ca2a98" name="Default Changelist" comment="" />
+    <list default="true" id="50af70a0-c0e0-4e3f-9270-e2dbc1ca2a98" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/db09cd3e-54f3-4d80-8234-1cf7c0520597.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/db09cd3e-54f3-4d80-8234-1cf7c0520597.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Task.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_07_130240_create_tasks_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -157,21 +185,45 @@
       <option name="presentableId" value="Default" />
       <updated>1604753116253</updated>
       <workItem from="1604753117360" duration="8400000" />
+      <workItem from="1604976745319" duration="2590000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="3139" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604753653044">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="3139" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1604753653044" />
+    <state x="717" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604978199851">
+      <screen x="48" y="27" width="1872" height="1053" />
+    </state>
+    <state x="717" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/48.27.1872.1053@48.27.1872.1053" timestamp="1604978199851" />
     <state x="3278" y="273" width="521" height="568" key="NewPhpClassDialog" timestamp="1604759007140">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="3278" y="273" width="521" height="568" key="NewPhpClassDialog/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1604759007140" />
+    <state x="881" y="431" width="196" height="251" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1604977005829">
+      <screen x="48" y="27" width="1872" height="1053" />
+    </state>
+    <state x="881" y="431" width="196" height="251" key="com.intellij.database.actions.DdlActions$CreateObject$1/48.27.1872.1053@48.27.1872.1053" timestamp="1604977005829" />
+    <state x="818" y="325" width="321" height="464" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1604978816042">
+      <screen x="48" y="27" width="1872" height="1053" />
+    </state>
+    <state x="818" y="325" width="321" height="464" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/48.27.1872.1053@48.27.1872.1053" timestamp="1604978816042" />
     <state x="3235" y="292" width="618" height="522" key="find.popup" timestamp="1604753484300">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
