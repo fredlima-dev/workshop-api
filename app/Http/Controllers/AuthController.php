@@ -45,4 +45,22 @@ class AuthController extends Controller
 
         return response()->json($user);
     }
+
+    public function logout(Request $request){
+
+        Auth::logout();
+        $request->session()->invalidate();
+
+        $request->token = null;
+        return response()->json(
+            [
+            "message" => "usuário deslogado.",
+            "nameUser" => $request->name,
+            "userId" => Auth::id(),
+            "token" => $request->token
+            ]
+        );
+    }
+
+    
 }

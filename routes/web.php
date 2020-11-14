@@ -15,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/login', 'App\Http\Controllers\AuthController@login');
 Route::post('/register', 'App\Http\Controllers\AuthController@register');
+Route::get('/list-workshop', 'App\Http\Controllers\WorkshopsController@getListWorkshop');
+Route::post('/logout', 'App\Http\Controllers\AuthController@logout');

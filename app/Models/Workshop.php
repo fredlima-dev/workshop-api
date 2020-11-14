@@ -10,15 +10,16 @@ class Workshop extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'lead', 'description', 'instructor', 'datetime', 'duration'];
+    protected $fillable = ['name', 'panelist', 'date', 'duration', 'subscribers', 'detailsLink'];
 
     public static function validate($data){
         $rules = [
-            'title' => 'required',
-            'lead' => 'required|max:255',
-            'description' => 'required',
-            'instructor' => 'required',
-            'datetime' => 'required|datetime'
+            'name' => 'required',
+            'panelist' => 'required',
+            'date' => 'required',
+            'duration' => 'required',
+            'subscribers' => 'required',
+            'detailsLink' => 'required'
         ];
 
         return Validator::make($data, $rules);
