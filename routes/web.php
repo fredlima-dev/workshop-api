@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/login', 'App\Http\Controllers\AuthController@login');
 Route::post('/register', 'App\Http\Controllers\AuthController@register');
+Route::get('users/show', 'App\Http\Controllers\Api\UsersController@show')->name('users.show');
