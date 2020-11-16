@@ -20,18 +20,5 @@ use App\Models\User;
 
 Route::post('/login', 'App\Http\Controllers\AuthController@login');
 Route::post('/register', 'App\Http\Controllers\AuthController@register');
+Route::get('/sendmail', 'App\Http\Controllers\AuthController@sendmail');
 
-Route::get('/sendmail', function(User $user, Request $request) {
-
-    $user = $user::where('email',$request->email)->first();
-    if(!$user){
-        return response()->json([
-            'error' => 'Usuário não encontrado.'
-        ], 404);
-    }
-
-    $data = User::where('id', $user->id)->first();
-    $data->token_reset_password = Str::random(32);
-    $data->save();
-    Mail::send(new \App\Mail\TestEmail($data));
-});
