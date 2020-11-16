@@ -1,7 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Str;
+use Symfony\Component\HttpFoundation\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Models\User;
+;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('/login', 'App\Http\Controllers\AuthController@login');
 Route::post('/register', 'App\Http\Controllers\AuthController@register');
 
-Route::get('/sendmail', function(\App\Models\User $user, \Symfony\Component\HttpFoundation\Request $request) {
+Route::get('/sendmail', function(User $user, Request $request) {
 
     $user = $user::where('email',$request->email)->first();
     if(!$user){
@@ -24,5 +29,9 @@ Route::get('/sendmail', function(\App\Models\User $user, \Symfony\Component\Http
             'error' => 'Usuário não encontrado.'
         ], 404);
     }
-    \Illuminate\Support\Facades\Mail::send(new \App\Mail\TestEmail($user));
+
+    $data = User::where('id', $user->id)->first();
+    $data->token_reset_password = Str::random(32);
+    $data->save();
+    Mail::send(new \App\Mail\TestEmail($data));
 });
