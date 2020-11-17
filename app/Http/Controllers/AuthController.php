@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class AuthController extends Controller
@@ -63,4 +64,18 @@ class AuthController extends Controller
     }
 
     
+  public function sendmail(User $user, Request $request)
+    {
+        $user = $user::where('email',$request->email)->first();
+        if(!$user){
+            return response()->json([
+                'error' => 'Usuário não encontrado.'
+            ], 404);
+        }
+
+        $data = User::where('id', $user->id)->first();
+        $data->token_reset_password = Str::random(32);
+        $data->save();
+        Mail::send(new \App\Mail\TestEmail($data));
+  }
 }
