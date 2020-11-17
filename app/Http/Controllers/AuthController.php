@@ -63,7 +63,7 @@ class AuthController extends Controller
         );
     }
 
-    
+
   public function sendmail(User $user, Request $request)
     {
         $user = $user::where('email',$request->email)->first();
@@ -78,4 +78,21 @@ class AuthController extends Controller
         $data->save();
         Mail::send(new \App\Mail\TestEmail($data));
   }
+
+    public function resetPassword(Request $request, User $user){
+
+        $token = $request->input('token');
+
+        $data = User::where('token_reset_password',$token)->first();
+
+        if(!$data){
+            return response()->json ([
+                'error' => 'usuário não autenticado'
+            ], 401);
+        };
+        $user = User::where('id', $data['id'])->first();
+        $user->password = Hash::make($request['password']);
+        $user->save();
+    }
+
 }
