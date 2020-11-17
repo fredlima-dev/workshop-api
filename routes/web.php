@@ -20,5 +20,5 @@ use App\Models\User;
 
 Route::post('/login', 'App\Http\Controllers\AuthController@login');
 Route::post('/register', 'App\Http\Controllers\AuthController@register');
-Route::get('/sendmail', 'App\Http\Controllers\AuthController@sendmail');
+Route::post('/sendmail', 'App\Http\Controllers\AuthController@sendmail');
 
