@@ -47,7 +47,24 @@ class AuthController extends Controller
         return response()->json($user);
     }
 
-    public function sendmail(User $user, Request $request)
+    public function logout(Request $request){
+
+        Auth::logout();
+        $request->session()->invalidate();
+
+        $request->token = null;
+        return response()->json(
+            [
+            "message" => "usuário deslogado.",
+            "nameUser" => $request->name,
+            "userId" => Auth::id(),
+            "token" => $request->token
+            ]
+        );
+    }
+
+    
+  public function sendmail(User $user, Request $request)
     {
         $user = $user::where('email',$request->email)->first();
         if(!$user){
@@ -60,5 +77,5 @@ class AuthController extends Controller
         $data->token_reset_password = Str::random(32);
         $data->save();
         Mail::send(new \App\Mail\TestEmail($data));
-    }
+  }
 }

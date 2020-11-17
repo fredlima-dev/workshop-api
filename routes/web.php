@@ -20,5 +20,7 @@ use App\Models\User;
 
 Route::post('/login', 'App\Http\Controllers\AuthController@login');
 Route::post('/register', 'App\Http\Controllers\AuthController@register');
+Route::get('/list-workshop', 'App\Http\Controllers\WorkshopsController@getListWorkshop');
+Route::post('/logout', 'App\Http\Controllers\AuthController@logout');
 Route::post('/sendmail', 'App\Http\Controllers\AuthController@sendmail');
 Route::get('users/show', 'App\Http\Controllers\Api\UsersController@show')->name('users.show');
