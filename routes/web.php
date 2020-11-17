@@ -1,7 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Str;
+use Symfony\Component\HttpFoundation\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Models\User;
+;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,4 +20,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/login', 'App\Http\Controllers\AuthController@login');
 Route::post('/register', 'App\Http\Controllers\AuthController@register');
+Route::post('/sendmail', 'App\Http\Controllers\AuthController@sendmail');
 Route::get('users/show', 'App\Http\Controllers\Api\UsersController@show')->name('users.show');
