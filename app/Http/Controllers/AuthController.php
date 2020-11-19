@@ -92,8 +92,11 @@ class AuthController extends Controller
         };
         $user = User::where('id', $data['id'])->first();
         $user->password = Hash::make($request['password']);
-        $user->token_reset_password = '';
+        $user->token_reset_password = null;
         $user->save();
+        return response()->json ([
+            'msg' => 'senha alterada'
+        ], 200);
     }
 
 }
