@@ -92,6 +92,7 @@ class AuthController extends Controller
         };
         $user = User::where('id', $data['id'])->first();
         $user->password = Hash::make($request['password']);
+        $user->token_reset_password = '';
         $user->save();
     }
 
