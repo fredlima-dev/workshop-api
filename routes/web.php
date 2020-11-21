@@ -25,3 +25,4 @@ Route::post('/logout', 'App\Http\Controllers\AuthController@logout');
 Route::post('/sendmail', 'App\Http\Controllers\AuthController@sendmail');
 Route::post('/reset-password', 'App\Http\Controllers\AuthController@resetPassword');
 Route::get('students/show', 'App\Http\Controllers\ApiStudentsController@show')->name('students.show');
+Route::get('students/show/{id}', 'App\Http\Controllers\ApiStudentsController@show_id')->name('students_id.show');
