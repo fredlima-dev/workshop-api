@@ -23,5 +23,18 @@ class WorkshopsController extends Controller
             return response()->json($worklist);
         }
     }
+
+    public function update($id, $name, $panelist, $date, $duration)
+    {
+        $update = Workshop::where('id', $id)
+            ->update(['name' => $name, 
+            'panelist' => $panelist, 
+            'date' => $date, 
+            'duration' => $duration]);
+            
+        return $update;
+    }// As migrations nao contem a conula referente a "descrição"
     
+
 }
+
