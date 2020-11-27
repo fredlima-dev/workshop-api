@@ -27,6 +27,16 @@ class ApiStudentsController extends Controller
         // ->groupBy('s.id')
         ->get();
 
+        // $return = [];
+        // foreach($get as $item){
+        //     if(array_key_exists($item->name, $return))
+        //         array_push($return[$item->name], $item->workshop);
+        //     else
+        //         $return[$item->name] = [$item->workshop];
+        // };
+
+        // return response()->json($return);
+        
         return response()->json($get);
     }
 }
