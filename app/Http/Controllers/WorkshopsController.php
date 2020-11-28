@@ -18,17 +18,6 @@ class WorkshopsController extends Controller
                                             ->first();
 
         return response()->json($workshop);
-
-        // if($worklist == false){
-
-        //     return response()->json(
-        //         [
-        //             'message' => 'Ainda não existem oficinas cadastradas'
-        //         ]         
-        //     );
-        // }else{
-        //     return response()->json($worklist);
-        // }
     }
 
     public function getListWorkshop(){
@@ -65,5 +54,17 @@ class WorkshopsController extends Controller
             "data"=> $workshop            
         ]);
     }
+
+
+
+    public function deleteWorkshop(Request $request){
+        $id = $request->route('id');
+
+        DB::table('workshops')->where('id', '=', $id)->delete();
+
+        return response()->json(
+            ["message" => "Registro deletado com sucesso"]
+        );
+    }    
     
 }

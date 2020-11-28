@@ -25,6 +25,7 @@ Route::post('/register', 'App\Http\Controllers\AuthController@register');
 Route::get('/list-workshop', 'App\Http\Controllers\WorkshopsController@getListWorkshop');
 Route::get('/list-workshop/{id}', 'App\Http\Controllers\WorkshopsController@getListWorkshopId');
 Route::post ('/create-workshop','App\Http\Controllers\WorkshopsController@createWorkshop');
+Route::delete ('/delete-workshop/{id}','App\Http\Controllers\WorkshopsController@deleteWorkshop');
 
 
 Route::post('/logout', 'App\Http\Controllers\AuthController@logout');
