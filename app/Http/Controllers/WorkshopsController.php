@@ -27,6 +27,18 @@ class WorkshopsController extends Controller
 
     }
 
+    public function update($id, $name, $panelist, $date, $duration)
+    {
+        $update = Workshop::where('id', $id)
+            ->update(['name' => $name, 
+            'panelist' => $panelist, 
+            'date' => $date, 
+            'duration' => $duration]);
+            
+        return $update;
+    }// As migrations nao contem a conula referente a "descrição"
+    
+  
     public function confirmWorkshop(Request $request)
     {
         $workshop_id = $request['id_workshop'];
@@ -36,5 +48,5 @@ class WorkshopsController extends Controller
         $subscription->save();
         }
     }
-
 }
+
