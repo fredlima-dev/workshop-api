@@ -5,16 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Subscription;
 use App\Models\Workshop;
 use Illuminate\Http\Request;
-use function Couchbase\defaultDecoder;
+use Illuminate\Support\Facades\DB;
 
 class WorkshopsController extends Controller
 {
 
-
     public function getListWorkshop(){
 
-        $worklist = Workshop::all();
-        if($worklist->empty()){
+        $worklist = DB::table('workshops')->orderBy('date', 'desc')->get();
+        if($worklist == false){
 
             return response()->json(
                 [
@@ -27,6 +26,38 @@ class WorkshopsController extends Controller
 
     }
 
+    public function createWorkshop(Request $request){
+        $data = $request->only('name', 'panelist', 'date', 'duration', 'subscribers', 'detailsLink');
+
+        $validator = Workshop::validate($data);
+
+        if($validator->fails()){
+            return response()->json([
+                'error' => 'Dados inválidos',
+                'teste' => $data,
+                'data' => $validator->fails()
+            ], 400);
+        }
+
+        $workshop = Workshop::create($data);
+        return response()->json([
+            "message" => "Gravado com sucesso",
+            "data"=> $workshop            
+        ]);
+    }
+
+
+    public function deleteWorkshop(Request $request){
+        $id = $request->route('id');
+
+        DB::table('workshops')->where('id', '=', $id)->delete();
+
+        return response()->json(
+            ["message" => "Registro deletado com sucesso"]
+        );
+    }    
+
+  
     public function update($id, $name, $panelist, $date, $duration)
     {
         $update = Workshop::where('id', $id)

@@ -20,7 +20,12 @@ use App\Models\User;
 
 Route::post('/login', 'App\Http\Controllers\AuthController@login');
 Route::post('/register', 'App\Http\Controllers\AuthController@register');
+
+// workshops
 Route::get('/list-workshop', 'App\Http\Controllers\WorkshopsController@getListWorkshop');
+Route::get('/list-workshop/{id}', 'App\Http\Controllers\WorkshopsController@getListWorkshopId');
+Route::post ('/create-workshop','App\Http\Controllers\WorkshopsController@createWorkshop');
+Route::delete ('/delete-workshop/{id}','App\Http\Controllers\WorkshopsController@deleteWorkshop');
 Route::post('/confirm-workshop', 'App\Http\Controllers\WorkshopsController@confirmWorkshop');
 Route::post('/logout', 'App\Http\Controllers\AuthController@logout');
 Route::post('/sendmail', 'App\Http\Controllers\AuthController@sendmail');

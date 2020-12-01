@@ -21,6 +21,8 @@ class CreateWorkshopsTable extends Migration
             $table->string('duration');
             $table->integer('subscribers');
             $table->string('detailsLink');
+            $table->datetime('updated_at');
+            $table->datetime('created_at');
         });
     }
 
