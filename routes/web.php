@@ -21,6 +21,7 @@ use App\Models\User;
 Route::post('/login', 'App\Http\Controllers\AuthController@login');
 Route::post('/register', 'App\Http\Controllers\AuthController@register');
 Route::get('/list-workshop', 'App\Http\Controllers\WorkshopsController@getListWorkshop');
+Route::post('/confirm-workshop', 'App\Http\Controllers\WorkshopsController@confirmWorkshop');
 Route::post('/logout', 'App\Http\Controllers\AuthController@logout');
 Route::post('/sendmail', 'App\Http\Controllers\AuthController@sendmail');
 Route::post('/reset-password', 'App\Http\Controllers\AuthController@resetPassword');
