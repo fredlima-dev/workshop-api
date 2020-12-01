@@ -29,6 +29,8 @@
     <list default="true" id="31a68108-f4f3-4df6-9bcf-ef49376698fe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WorkshopsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WorkshopsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +167,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -177,6 +180,21 @@
       <updated>1605746723699</updated>
       <workItem from="1605746749889" duration="64000" />
       <workItem from="1605747071768" duration="977000" />
+      <updated>1604753116253</updated>
+      <workItem from="1604753117360" duration="8400000" />
+      <workItem from="1604976745319" duration="3344000" />
+      <workItem from="1605011518674" duration="18000" />
+      <workItem from="1605452960935" duration="13767000" />
+      <workItem from="1605812229047" duration="778000" />
+      <workItem from="1606568761596" duration="1327000" />
+      <workItem from="1606570450291" duration="3602000" />
+    </task>
+    <task id="LOCAL-00001" summary="Data model entities">
+      <created>1604979360944</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604979360944</updated>
     </task>
     <servers />
   </component>
@@ -205,5 +223,56 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Data model entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Data model entities" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="3139" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604753653044">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="3139" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1604753653044" />
+    <state x="734" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606570912359">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="734" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606570912359" />
+    <state x="717" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604978199851">
+      <screen x="48" y="27" width="1872" height="1053" />
+    </state>
+    <state x="717" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/48.27.1872.1053@48.27.1872.1053" timestamp="1604978199851" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1605813638289">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1605813638289" />
+    <state x="3278" y="273" width="521" height="568" key="NewPhpClassDialog" timestamp="1604759007140">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="3278" y="273" width="521" height="568" key="NewPhpClassDialog/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1604759007140" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1606570520137">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606570520137" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1605458867497">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1605458867497" />
+    <state x="881" y="431" width="196" height="251" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1604977005829">
+      <screen x="48" y="27" width="1872" height="1053" />
+    </state>
+    <state x="881" y="431" width="196" height="251" key="com.intellij.database.actions.DdlActions$CreateObject$1/48.27.1872.1053@48.27.1872.1053" timestamp="1604977005829" />
+    <state x="818" y="325" width="321" height="464" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1604978816042">
+      <screen x="48" y="27" width="1872" height="1053" />
+    </state>
+    <state x="818" y="325" width="321" height="464" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/48.27.1872.1053@48.27.1872.1053" timestamp="1604978816042" />
+    <state x="3235" y="292" width="618" height="522" key="find.popup" timestamp="1604753484300">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="3235" y="292" width="618" height="522" key="find.popup/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1604753484300" />
+    <state x="3207" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1604760884059">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="3207" y="259" width="672" height="678" key="search.everywhere.popup/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1604760884059" />
   </component>
 </project>
