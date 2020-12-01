@@ -26,9 +26,10 @@ Route::get('/list-workshop', 'App\Http\Controllers\WorkshopsController@getListWo
 Route::get('/list-workshop/{id}', 'App\Http\Controllers\WorkshopsController@getListWorkshopId');
 Route::post ('/create-workshop','App\Http\Controllers\WorkshopsController@createWorkshop');
 Route::delete ('/delete-workshop/{id}','App\Http\Controllers\WorkshopsController@deleteWorkshop');
-
-
+Route::post('/confirm-workshop', 'App\Http\Controllers\WorkshopsController@confirmWorkshop');
 Route::post('/logout', 'App\Http\Controllers\AuthController@logout');
 Route::post('/sendmail', 'App\Http\Controllers\AuthController@sendmail');
-Route::get('users/show', 'App\Http\Controllers\Api\UsersController@show')->name('users.show');
 Route::post('/reset-password', 'App\Http\Controllers\AuthController@resetPassword');
+Route::get('students/show', 'App\Http\Controllers\ApiStudentsController@show')->name('students.show');
+Route::get('students/show/{id}', 'App\Http\Controllers\ApiStudentsController@show_id')->name('students_id.show');
+Route::update('workshop/edit/{id}', 'App\Http\Controllers\Api\WorkshopsController@update')->name('workshop.edit');
